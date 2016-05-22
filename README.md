@@ -32,7 +32,7 @@ Windows and Mac OS versions are recommended.
 The Linux version is fairly new so might be unstable.  
 
 ##### For some reason I can't do anything Android related on Unity.
-Make sure you are installing from Unity's Download Assistant and not a specific Unity Installer executable.  
+Make sure you are installing from Unity's Download Assistant and not a specific Unity version x.x.x installer.  
 The Unity download website should have the Unity Download Assistant as the default download.  
 You should be getting the options in the image below during your installation.  
 Install with Android build support.  
