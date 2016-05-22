@@ -17,12 +17,12 @@ Ignore the .meta files as those are Unity's organization files.
 ### Building without Unity
 ---
 Currently there is no way to build the project without the Unity editor.
-A .apk file will be placed inside the repository.
+There will be a .apk file in the repository which can then be installed through the Google Tango.
 
-### Building with Unity
+### Getting Started with Unity
 ---
 Unity can build for many platforms including Android which the Google Tango uses.
-Follow these instructions from the [Google Unity getting started](https://developers.google.com/project-tango/apis/unity/).
+Follow these instructions from the [Google Unity getting started website](https://developers.google.com/project-tango/apis/unity/).
 
 ##### What version should I use?
 This project was built and tested using Unity version 3.4.1.f on Windows 10.
@@ -38,4 +38,7 @@ Microsoft Visual Studio is the preferred text editor.
 
 ![alt tag](https://raw.githubusercontent.com/ssl024/TangoMapper/master/images/unity_install_components.PNG?token=AIseTDOSsc2W0s8zvFfZoPII5n6sUQEtks5XS3HTwA%3D%3D)
 
-##### 
+### Installing on the Google Tango
+---
+Take the .apk that Unity builds and move it over to the Google Tango.
+Use a file explorer application on the Tango and install the .apk.
