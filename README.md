@@ -24,7 +24,7 @@ There will be a .apk file in the repository which can then be installed through 
 ### Getting Started with Unity
 ---
 Unity can build for many platforms including Android which the Google Tango uses.  
-Follow these instructions from the [Google Unity getting started website](https://developers.google.com/project-tango/apis/unity/).
+#Follow these instructions from the [Google Unity getting started website](https://developers.google.com/project-tango/apis/unity/).
 
 ##### What version should I use?
 This project was built and tested using Unity version 3.4.1.f on Windows 10.  
