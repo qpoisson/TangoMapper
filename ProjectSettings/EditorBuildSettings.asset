@@ -6,4 +6,4 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TangoSDK/Examples/Scenes/ExperimentalMeshBuilderWithColor.unity
+    path: Assets/TangoSDK/Project/Scenes/ExperimentalMeshBuilderWithColor.unity
