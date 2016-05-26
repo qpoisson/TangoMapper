@@ -13,6 +13,7 @@ public class DataWriter : MonoBehaviour, ITangoPose, ITangoDepth, ITangoVideoOve
     public string posePath;
     public string depthPath;
     public string imagePath;
+    public string exportPath = "/sdcard/TangoUnityMeshes";
 
     private double last_timestamp;
 
@@ -197,6 +198,9 @@ public class DataWriter : MonoBehaviour, ITangoPose, ITangoDepth, ITangoVideoOve
         Directory.CreateDirectory(posePath);
         Directory.CreateDirectory(depthPath);
         Directory.CreateDirectory(imagePath);
+        
+        // Create mesh directory
+        Directory.CreateDirectory(exportPath);
     }
 
 

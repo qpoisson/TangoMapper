@@ -14,6 +14,9 @@ public class MeshBuilderGUIWithExport : MonoBehaviour
 
     // Reference to dataWriter
     public DataWriter dataWriter;
+    
+    // Will be filled by start menu GUI
+    public string exportName;
 
     /// <summary>
     /// Debug info: If the mesh is being updated.
@@ -24,15 +27,11 @@ public class MeshBuilderGUIWithExport : MonoBehaviour
     private bool m_imageEnabled = false;
 
     private TangoApplication m_tangoApplication;
-    private TangoDynamicMesh m_dynamicMesh;
+    public TangoDynamicMesh m_dynamicMesh;
 
-    /// <summary>
-    /// Start is used to initialize.
-    /// </summary>
-    public void Start()
+    public void Awake()
     {
         m_tangoApplication = FindObjectOfType<TangoApplication>();
-        m_dynamicMesh = FindObjectOfType<TangoDynamicMesh>();
     }
 
     /// <summary>
@@ -67,7 +66,7 @@ public class MeshBuilderGUIWithExport : MonoBehaviour
 
         if (GUI.Button(new Rect(Screen.width - 160, 220, 140, 80), "<size=30>Export</size>"))
         {
-            string filepath = string.Format("/sdcard/DemoMesh.obj");
+            string filepath = dataWriter.exportPath + "/" + exportName + ".obj";
             m_dynamicMesh.ExportMeshToObj(filepath);
             Debug.Log(filepath);
         }
