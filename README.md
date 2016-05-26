@@ -44,3 +44,10 @@ Microsoft Visual Studio is the preferred text editor.
 ---
 Take the .apk that Unity builds and move it over to the Google Tango.  
 Use a file explorer application on the Tango and install the .apk.  
+
+##### How do I use the application?
+---
+
+### App menu
+---
+You have the application and a file explorer I am using in conjunction.
