@@ -11,10 +11,17 @@ using UnityEngine;
 
 public class MeshBuilderGUIWithExport : MonoBehaviour
 {
+
+    // Reference to dataWriter
+    public DataWriter dataWriter;
+
     /// <summary>
     /// Debug info: If the mesh is being updated.
     /// </summary>
     private bool m_isEnabled = true;
+    private bool m_poseEnabled = false;
+    private bool m_depthEnabled = false;
+    private bool m_imageEnabled = false;
 
     private TangoApplication m_tangoApplication;
     private TangoDynamicMesh m_dynamicMesh;
@@ -63,6 +70,30 @@ public class MeshBuilderGUIWithExport : MonoBehaviour
             string filepath = string.Format("/sdcard/DemoMesh.obj");
             m_dynamicMesh.ExportMeshToObj(filepath);
             Debug.Log(filepath);
+        }
+
+        string poseStatus = m_poseEnabled ? "Pose is on" : "Pose is off";
+        if (GUI.Button(new Rect(Screen.width - 160, 320, 140, 80), "<size=24>" + poseStatus + "</size>"))
+        {
+            // Toggle
+            m_poseEnabled = !m_poseEnabled;
+            dataWriter.poseIsRecording = m_poseEnabled;
+        }
+
+        string depthStatus = m_depthEnabled ? "Depth is on" : "Depth is off";
+        if (GUI.Button(new Rect(Screen.width - 160, 420, 140, 80), "<size=24>" + depthStatus + "</size>"))
+        {
+            // Toggle
+            m_depthEnabled = !m_depthEnabled;
+            dataWriter.depthIsRecording = m_depthEnabled;
+        }
+
+        string imageStatus = m_imageEnabled ? "Image is on" : "Image is off";
+        if (GUI.Button(new Rect(Screen.width - 160, 520, 140, 80), "<size=24>" + imageStatus + "</size>"))
+        {
+            // Toggle
+            m_imageEnabled = !m_imageEnabled;
+            dataWriter.imageIsRecording = m_imageEnabled;
         }
     }
 }

@@ -12,8 +12,6 @@ public class MyDebugger : MonoBehaviour, ITangoPose {
 
     private TangoApplication m_tangoApplication;
 
-    private int loopClosureDebugNum = 0;
-
 	// Use this for initialization
 	void Start () {
         m_tangoApplication = GameObject.FindObjectOfType<TangoApplication>();
@@ -37,18 +35,8 @@ public class MyDebugger : MonoBehaviour, ITangoPose {
         TangoEnums.TangoCoordinateFrameType.TANGO_COORDINATE_FRAME_START_OF_SERVICE &&
         poseData.status_code == TangoEnums.TangoPoseStatusType.TANGO_POSE_VALID)
         {
-            loopClosureDebugNum += 1;
+            AndroidHelper.ShowAndroidToastMessage("Loop detected");
         }
     }
 
-    public void OnGUI()
-    {
-        if (m_enableDebugUI)
-        {
-            GUI.color = Color.black;
-
-            string str = string.Format("<size=30>Loop Closure: {0}</size>", loopClosureDebugNum);
-            GUI.Label(new Rect(700, 80, 1000, 40), str);
-        }
-    }
 }

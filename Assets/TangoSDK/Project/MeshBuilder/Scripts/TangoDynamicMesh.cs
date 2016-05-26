@@ -113,7 +113,7 @@ public class TangoDynamicMesh : MonoBehaviour, ITango3DReconstruction, ITangoPos
     /// <summary>
     /// Unity Awake callback.
     /// </summary>
-    public void Awake()
+    public void Start()
     {
         m_tangoApplication = GameObject.FindObjectOfType<TangoApplication>();
         if (m_tangoApplication != null)
@@ -527,11 +527,12 @@ public class TangoDynamicMesh : MonoBehaviour, ITango3DReconstruction, ITangoPos
         poseData.status_code == TangoEnums.TangoPoseStatusType.TANGO_POSE_VALID)
         {
 
+            /* Debug
             // It's more important to be responsive than to handle all indexes.  Add unprocessed indices to the 
             // backlog and clear the current list if we have fallen behind in processing.
             m_gridUpdateBacklog.UnionWith(m_gridIndexToUpdate);
             m_gridIndexToUpdate.Clear();
-            m_gridIndexToUpdate.AddRange(m_meshes.Keys);
+            m_gridIndexToUpdate.AddRange(m_meshes.Keys);*/
         }
 
 
